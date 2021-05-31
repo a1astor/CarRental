@@ -1,6 +1,8 @@
 package models;
 
 import lombok.Data;
+import models.utilsclass.CarBodyType;
+import models.utilsclass.TransmissionType;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
