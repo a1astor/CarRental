@@ -39,7 +39,7 @@ CREATE TABLE AutoHouses (
   start_work date NOT NULL,
   end_work date NOT NULL,
   PRIMARY KEY (id),
-  CONSTRAINT AutoHouses_adress_id_Adress_id_foreign FOREIGN KEY (adress_id) REFERENCES Adress (id)
+  CONSTRAINT AutoHouses_adress_id_Adress_id_foreign FOREIGN KEY (adress_id) REFERENCES address (id)
 );
 
 CREATE TABLE promotions (
