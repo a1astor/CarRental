@@ -1,4 +1,4 @@
-package models;
+package models.utilsclass;
 
 public enum CarBodyType {
     SEDAN("SEDAN"),
