@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4dc33b22-5dda-497f-b8ab-4ba711614c44" name="Default Changelist" comment="add entities class other table">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/7c3b8d2f-e357-47e6-bd30-e2ad76fcc35f.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/7c3b8d2f-e357-47e6-bd30-e2ad76fcc35f/storage_v2/_src_/database/carRental.GLr_0g.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/7c3b8d2f-e357-47e6-bd30-e2ad76fcc35f/storage_v2/_src_/database/carRental.GLr_0g/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/7c3b8d2f-e357-47e6-bd30-e2ad76fcc35f/storage_v2/_src_/database/carRental.GLr_0g/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/7c3b8d2f-e357-47e6-bd30-e2ad76fcc35f/storage_v2/_src_/database/carRental.GLr_0g/schema/public.abK9xQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pac/controllers/CarController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pac/dao/CarRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pac/exceptions/CustomExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pac/exceptions/NoSuchCarException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pac/main/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pac/model/utilsclass/HibernateSessionFactoryUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pac/services/CarService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pac/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pac/model/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Autohouses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pac/model/Autohouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Cars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pac/model/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Clients.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pac/model/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pac/model/Contract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Drivers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pac/model/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Models.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pac/model/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Price.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pac/model/Price.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Promotion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pac/model/Promotion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/utilsclass/CarBodyType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pac/model/utilsclass/CarBodyType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/utilsclass/CustomGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pac/model/utilsclass/CustomGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/utilsclass/TransmissionType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pac/model/utilsclass/TransmissionType.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="spring-beans.schema" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1tG0ARLHmSXLYusktKVHZRuayqU" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.152439" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="exceptions" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="CarRental" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.pac.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.pac.main.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.Application" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4dc33b22-5dda-497f-b8ab-4ba711614c44" name="Default Changelist" comment="" />
+      <created>1622379975382</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1622379975382</updated>
+      <workItem from="1622379979252" duration="6102000" />
+      <workItem from="1622399556614" duration="905000" />
+      <workItem from="1622490674352" duration="5451000" />
+      <workItem from="1622750036637" duration="3109000" />
+      <workItem from="1623096578217" duration="11000" />
+      <workItem from="1625508870149" duration="1174000" />
+      <workItem from="1625555498076" duration="46000" />
+      <workItem from="1627411472550" duration="3683000" />
+    </task>
+    <task id="LOCAL-00001" summary="Add basic project structure, add dao class for car table">
+      <created>1622383984158</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1622383984158</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add basic project structure, add dao class for models table">
+      <created>1622384399445</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1622384399445</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add basic project structure, add dao class for models table">
+      <created>1622493805845</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1622493805845</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Move utils enums in new package">
+      <created>1622493910811</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1622493910811</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add entities class for drivers table">
+      <created>1622493959137</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1622493959137</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add entities class other table">
+      <created>1622496116433</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1622496116433</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add basic project structure, add dao class for car table" />
+    <MESSAGE value="Add custom generator for primary key contracts table" />
+    <MESSAGE value="Move utils enums in new package" />
+    <MESSAGE value="add entities class for drivers table" />
+    <MESSAGE value="add entities class other table" />
+    <option name="LAST_COMMIT_MESSAGE" value="add entities class other table" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

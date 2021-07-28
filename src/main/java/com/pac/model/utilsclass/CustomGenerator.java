@@ -1,4 +1,4 @@
-package models.utilsclass;
+package com.pac.model.utilsclass;
 
 import org.hibernate.HibernateException;
 import org.hibernate.MappingException;

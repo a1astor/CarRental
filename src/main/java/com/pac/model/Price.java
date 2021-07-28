@@ -1,4 +1,4 @@
-package models;
+package com.pac.model;
 
 import lombok.Data;
 
@@ -8,23 +8,21 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.util.Date;
 
 @Data
 @Entity
-@Table(name = "autohouses")
-public class Autohouses {
-
+@Table(name = "price")
+public class Price {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int car_id;
 
-    @Column(name = "address_id")
-    private int address_id;
+    @Column(name = "start_price")
+    private int start_price;
 
-    @Column(name = "start_work")
-    private Date start_work;
+    @Column(name = "profitability_coeff")
+    private int profitability_coeff;
 
-    @Column(name = "end_work")
-    private Date end_work;
+    @Column(name = "amortization_coeff")
+    private int amortization_coeff;
 }
