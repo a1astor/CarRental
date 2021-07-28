@@ -1,4 +1,4 @@
-package models;
+package com.pac.model;
 
 import lombok.Data;
 
@@ -10,9 +10,9 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "models")
+@Table(name = "com.pac.models")
 @Data
-public class Models {
+public class Model {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

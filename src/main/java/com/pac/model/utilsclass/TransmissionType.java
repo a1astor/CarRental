@@ -1,4 +1,4 @@
-package models.utilsclass;
+package com.pac.model.utilsclass;
 
 public enum TransmissionType {
 

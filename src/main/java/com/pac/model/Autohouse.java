@@ -1,4 +1,4 @@
-package models;
+package com.pac.model;
 
 import lombok.Data;
 
@@ -12,22 +12,19 @@ import java.util.Date;
 
 @Data
 @Entity
-@Table(name = "promotions")
-public class Promotion {
+@Table(name = "autohouses")
+public class Autohouse {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "start_date")
-    private Date start_date;
+    @Column(name = "address_id")
+    private int address_id;
 
-    @Column(name = "end_date")
-    private Date end_date;
+    @Column(name = "start_work")
+    private Date start_work;
 
-    @Column(name = "promotion")
-    private int promotion;
-
-    @Column(name = "model_id")
-    private int model_id;
+    @Column(name = "end_work")
+    private Date end_work;
 }

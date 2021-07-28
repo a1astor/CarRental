@@ -1,7 +1,7 @@
-package models;
+package com.pac.model;
 
 import lombok.Data;
-import models.utilsclass.CustomGenerator;
+
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Parameter;
 

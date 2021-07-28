@@ -1,4 +1,4 @@
-package models;
+package com.pac.model;
 
 import lombok.Data;
 
@@ -13,7 +13,7 @@ import java.util.Date;
 @Data
 @Entity
 @Table(name = "clients")
-public class Clients {
+public class Client {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
