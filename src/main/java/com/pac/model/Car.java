@@ -1,8 +1,8 @@
-package models;
+package com.pac.model;
 
 import lombok.Data;
-import models.utilsclass.CarBodyType;
-import models.utilsclass.TransmissionType;
+import com.pac.model.utilsclass.CarBodyType;
+import com.pac.model.utilsclass.TransmissionType;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,7 +15,7 @@ import java.util.Date;
 @Data
 @Entity
 @Table(name = "cars")
-public class Cars {
+public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
