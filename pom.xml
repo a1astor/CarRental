@@ -61,7 +61,7 @@
             <artifactId>hibernate-validator</artifactId>
             <version>7.0.0.Final</version>
         </dependency>
-<!--        utils-->
+<!--        com.pac.utils-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>

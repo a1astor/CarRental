@@ -11,16 +11,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import io.swagger.annotations.ApiOperation;
-import lombok.RequiredArgsConstructor;
-
 import com.pac.exceptions.NoSuchCarException;
 import com.pac.model.Car;
 import com.pac.services.CarService;
 
+import io.swagger.annotations.ApiOperation;
+
 @RestController
 @RequestMapping("/cars")
-@RequiredArgsConstructor
 public class CarController {
 
     private CarService carService;

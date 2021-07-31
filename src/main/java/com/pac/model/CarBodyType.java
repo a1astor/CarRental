@@ -1,4 +1,4 @@
-package com.pac.model.utilsclass;
+package com.pac.model;
 
 public enum CarBodyType {
     SEDAN("SEDAN"),
