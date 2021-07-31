@@ -1,6 +1,7 @@
 package com.pac.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import com.pac.dao.CarRepository;
@@ -12,8 +13,8 @@ public class CarService {
 
     private final CarRepository carRepository;
 
-
-    public CarService(@Autowired CarRepository carRepository) {
+    @Autowired
+    public CarService(@Qualifier("carRepositoryImpl") CarRepository carRepository) {
         this.carRepository = carRepository;
     }
 

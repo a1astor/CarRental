@@ -1,11 +1,11 @@
 package com.pac.model;
 
 import lombok.Data;
-import com.pac.model.utilsclass.CarBodyType;
-import com.pac.model.utilsclass.TransmissionType;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -35,12 +35,14 @@ public class Car {
     @Column(name = "sits_count")
     private int sits_count;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "body_type")
     private CarBodyType body_type;
 
     @Column(name = "fuel_consumption")
     private int fuel_consumption;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "fuel_consumption")
     private TransmissionType transmission;
 
