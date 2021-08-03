@@ -18,7 +18,7 @@ import java.util.Date;
 public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
 
     @Column(name = "model_id")
     private int model_id;
@@ -43,7 +43,7 @@ public class Car {
     private int fuel_consumption;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "fuel_consumption")
+    @Column(name = "transmission")
     private TransmissionType transmission;
 
     @Column(name = "autohouse_id")
