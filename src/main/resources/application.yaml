@@ -2,12 +2,12 @@ spring:
   jpa:
     properties:
       javax.persistence.validation.mode: none
-      hibernate.dialect: org.hibernate.dialect.PostgreSQL10Dialect
+      hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
       hibernate.show_sql: true
       hibernate.connection.characterEncoding: utf8mb4
       hibernate.connection.CharSet: utf8mb4
       hibernate.connection.useUnicode: true
-      hibernate.hbm2ddl.auto: create
+  #      hibernate.hbm2ddl.auto: create
   datasource:
     hikari:
       jdbc-url: "jdbc:postgresql://localhost:5432/carRental"
@@ -17,6 +17,10 @@ spring:
     password: admin
     url: "jdbc:postgresql://localhost:5432/carRental"
     driver-class-name: org.postgresql.Driver
+  jwt:
+    header: Authorization
+    key: carRentall
+    expiration: 777777
 
 server:
   port: 8081

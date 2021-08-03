@@ -12,8 +12,13 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(NoSuchCarException.class)
-    protected ResponseEntity<DaoException> handleNoSuchCityException() {
+    protected ResponseEntity<DaoException> handleNoSuchCarException() {
         return new ResponseEntity<>(new DaoException("There is no such car"), HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(NoSuchAddressException.class)
+    protected ResponseEntity<DaoException> handleNoSuchAddressException() {
+        return new ResponseEntity<>(new DaoException("There is no such address"), HttpStatus.NOT_FOUND);
     }
 
     @Data
