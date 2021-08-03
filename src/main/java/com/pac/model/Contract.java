@@ -8,6 +8,7 @@ import org.hibernate.annotations.Parameter;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.util.Date;
@@ -19,8 +20,9 @@ public class Contract {
 
     //TODO correct custom generator path
     @Id
-    @GeneratedValue(generator = "cnt-generator")
-    @GenericGenerator(name = "cnt-generator", parameters = @Parameter(name = "prefix", value = "cnt"),strategy = "CustomGenerator")
+//    @GeneratedValue(generator = "cnt-generator")
+//    @GenericGenerator(name = "cnt-generator", parameters = @Parameter(name = "prefix", value = "cnt"),strategy = "CustomGenerator")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
 
     @Column(name = "car_id")
