@@ -16,6 +16,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Component;
 
 import com.pac.exceptions.JwtAuthenticationException;
+import com.pac.services.Impl.UserDetailServiceImpl;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
@@ -31,18 +32,18 @@ public class JwtTokenProvider {
 
     private final UserDetailsService userDetailsService;
 
-    @Value("$jwt.expiration")
+    @Value("${jwt.expiration}")
     private int expirationTimeInSec;
 
-    @Value("$jwt.key")
+    @Value("${jwt.key}")
     private String secretKey;
 
-    @Value("$jwc.header")
+    @Value("${jwt.header}")
     private String authorizationHeader;
 
 
     @Autowired
-    public JwtTokenProvider(UserDetailsService userDetailsService) {
+    public JwtTokenProvider(UserDetailServiceImpl userDetailsService) {
         this.userDetailsService = userDetailsService;
     }
 

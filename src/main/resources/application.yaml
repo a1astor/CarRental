@@ -17,10 +17,10 @@ spring:
     password: admin
     url: "jdbc:postgresql://localhost:5432/carRental"
     driver-class-name: org.postgresql.Driver
-  jwt:
-    header: Authorization
-    key: carRentall
-    expiration: 777777
+jwt:
+  header: Authorization
+  key: carRentall
+  expiration: 777777
 
 server:
   port: 8081

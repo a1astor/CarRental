@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "com.pac.models")
+@Table(name = "models")
 @Data
 public class Model {
 
