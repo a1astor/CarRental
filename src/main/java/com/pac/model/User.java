@@ -1,5 +1,6 @@
-package com.pac.model.secutiry;
+package com.pac.model;
 
+import lombok.Data;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,24 +11,32 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.Data;
+import java.util.Date;
 
-@Entity
+import com.pac.model.secutiry.Role;
+
 @Data
-@Table(name = "Users")
+@Entity
+@Table(name = "users")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long userId;
+    private int id;
 
-    @Enumerated(EnumType.STRING)
+    @Column(name = "name")
+    private String name;
+
+    @Column(name = "surname")
+    private String surname;
+
+    @Column(name = "email")
+    private String email;
+
     @Column(name = "role")
+    @Enumerated(EnumType.STRING)
     private Role role;
 
     @Column(name = "password")
     private String password;
-
-    @Column(name = "email")
-    private String email;
 }

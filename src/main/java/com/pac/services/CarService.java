@@ -1,7 +1,10 @@
 package com.pac.services;
 
+import java.util.List;
+
 import com.pac.exceptions.NoSuchCarException;
 import com.pac.model.Car;
+import com.pac.model.utilsclass.CarDTO;
 
 public interface CarService {
 
@@ -10,4 +13,6 @@ public interface CarService {
     Iterable<Car> findAll();
 
     void deleteById(Long id);
+
+    List<Car> findByParam(CarDTO carDTO);
 }

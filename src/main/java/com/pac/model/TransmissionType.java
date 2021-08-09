@@ -2,9 +2,9 @@ package com.pac.model;
 
 public enum TransmissionType {
 
-    AUTOMATIC_TRANSMISSION("AT"),
+    AT("AT"),
 
-    MANUAL_TRANSMISSION("MT"),
+    MT("MT"),
 
     AUTOMATED_MANUAL_TRANSMISSION("AM"),
 

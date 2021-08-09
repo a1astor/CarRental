@@ -10,8 +10,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableJpaRepositories
 @SpringBootApplication(scanBasePackages = "com.pac")
 public class Application {
-
     public static void main(String[] args) {
-      SpringApplication.run(Application.class);
+      SpringApplication.run(Application.class, args);
     }
 }
