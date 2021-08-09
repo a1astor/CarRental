@@ -1,5 +1,7 @@
 package com.pac.controllers;
 
+import java.util.List;
+
 import javax.transaction.Transactional;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
@@ -14,9 +16,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.pac.exceptions.NoSuchCarException;
 import com.pac.model.Car;
+import com.pac.model.utilsclass.CarDTO;
 import com.pac.services.CarService;
 
 import io.swagger.annotations.ApiOperation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.parameters.RequestBody;
 
 @RestController
 @RequestMapping("api/cars")
@@ -42,6 +48,11 @@ public class CarController {
     @GetMapping("/{id}")
     public Car findCar(@PathVariable Long id) throws NoSuchCarException {
         return carService.findById(id);
+    }
+
+    @GetMapping("/find")
+    public List<Car> findCar(@RequestBody CarDTO carDTO) {
+        return carService.findByParam(carDTO);
     }
 
 //    @NotNull

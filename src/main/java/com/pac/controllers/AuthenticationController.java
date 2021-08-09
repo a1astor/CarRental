@@ -3,13 +3,10 @@ package com.pac.controllers;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.naming.AuthenticationException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.swing.JFileChooser;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -21,12 +18,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.pac.dao.UserRepository;
-import com.pac.model.secutiry.User;
+import com.pac.model.User;
 import com.pac.security.AuthenticationRequestDTO;
 import com.pac.security.JwtTokenProvider;
 
 @RestController
-@RequestMapping("/api/auth")
+@RequestMapping("/auth")
 public class AuthenticationController {
 
     private final AuthenticationManager authenticationManager;
@@ -44,8 +41,8 @@ public class AuthenticationController {
 
     @PostMapping("/login")
     public ResponseEntity<?> authenticate(@RequestBody AuthenticationRequestDTO requestDTO) {
-        authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(requestDTO.getEmail(), requestDTO.getPassword()));
         User user = userRepository.findByEmail(requestDTO.getEmail()).orElseThrow(() -> new UsernameNotFoundException("user doesn't exist"));
+        authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(requestDTO.getEmail(), requestDTO.getPassword(),user.getRole().getAuthorities()));
         String token = jwtTokenProvider.createToken(requestDTO.getEmail(), user.getRole().name());
         Map<Object, Object> response = new HashMap<>();
         response.put("email", requestDTO.getEmail());
