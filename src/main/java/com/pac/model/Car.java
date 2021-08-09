@@ -23,9 +23,6 @@ public class Car {
     @Column(name = "model_id")
     private int model_id;
 
-    @Column(name = "buy_date")
-    private int buy_date;
-
     @Column(name = "rented")
     private boolean rented;
 

@@ -93,7 +93,7 @@ CREATE TABLE Contract (
   CONSTRAINT Contract_car_id_Cars_id_foreign FOREIGN KEY (car_id) REFERENCES Cars (id),
   CONSTRAINT Contract_auto_house_id_AutoHouses_id_foreign FOREIGN KEY (auto_house_id) REFERENCES AutoHouses (id),
   CONSTRAINT Contract_driver_id_Drivers_driver_id_foreign FOREIGN KEY (driver_id) REFERENCES Drivers (driver_id),
-  CONSTRAINT Contract_client_id_Clients_client_id_foreign FOREIGN KEY (client_id) REFERENCES Clients (client_id),
+  CONSTRAINT Contract_client_id_Clients_client_id_foreign FOREIGN KEY (client_id) REFERENCES users (id),
   CONSTRAINT Contract_promotion_id_promotions_id_foreign FOREIGN KEY (promotion_id) REFERENCES promotions (id),
   CONSTRAINT Contract_price_id_Price_id_foreign FOREIGN KEY (price_id) REFERENCES Price (id)
 );

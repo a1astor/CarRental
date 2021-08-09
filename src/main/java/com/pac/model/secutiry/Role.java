@@ -6,9 +6,9 @@ import java.util.stream.Collectors;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 public enum Role {
-    USER_ROLE(Set.of(Permission.READ)),
-    DRIVER_ROLE(Set.of(Permission.READ, Permission.UPDATE)),
-    ADMIN_ROLE(Set.of(Permission.READ, Permission.UPDATE, Permission.WRITE, Permission.DELETE));
+    USER(Set.of(Permission.READ)),
+    DRIVER(Set.of(Permission.READ, Permission.UPDATE)),
+    ADMIN(Set.of(Permission.READ, Permission.UPDATE, Permission.WRITE, Permission.DELETE));
 
     private final Set<Permission> permissions;
 
