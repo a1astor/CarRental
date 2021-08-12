@@ -7,6 +7,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,14 +15,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.pac.dao.CarRepository;
+import com.pac.dao.CarSpecs;
 import com.pac.exceptions.NoSuchCarException;
 import com.pac.model.Car;
 import com.pac.model.utilsclass.CarDTO;
 import com.pac.services.CarService;
 
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.media.Content;
-import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.parameters.RequestBody;
 
 @RestController
@@ -30,9 +31,12 @@ public class CarController {
 
     private final CarService carService;
 
+    private final CarRepository carRepository;
+
     @Autowired
-    public CarController(CarService carService) {
+    public CarController(CarService carService, CarRepository carRepository) {
         this.carService = carService;
+        this.carRepository = carRepository;
     }
 
     @ApiOperation(value = "Find all cars")

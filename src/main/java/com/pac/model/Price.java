@@ -2,6 +2,7 @@ package com.pac.model;
 
 import lombok.Data;
 
+import javax.persistence.Cacheable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,6 +12,7 @@ import javax.persistence.Table;
 
 @Data
 @Entity
+@Cacheable
 @Table(name = "price")
 public class Price {
     @Id
