@@ -2,6 +2,8 @@ package com.pac.services;
 
 import java.util.List;
 
+import org.springframework.data.jpa.domain.Specification;
+
 import com.pac.exceptions.NoSuchCarException;
 import com.pac.model.Car;
 import com.pac.model.utilsclass.CarDTO;

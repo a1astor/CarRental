@@ -2,6 +2,7 @@ package com.pac.model;
 
 import lombok.Data;
 
+import javax.persistence.Cacheable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,7 +18,7 @@ public class Promotion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
 
     @Column(name = "start_date")
     private Date start_date;
@@ -26,7 +27,7 @@ public class Promotion {
     private Date end_date;
 
     @Column(name = "promotion")
-    private int promotion;
+    private double promotion;
 
     @Column(name = "model_id")
     private int model_id;
