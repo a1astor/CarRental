@@ -2,6 +2,7 @@ package com.pac.model;
 
 import lombok.Data;
 
+import javax.persistence.Cacheable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -13,10 +14,13 @@ import javax.persistence.Table;
 
 import java.util.Date;
 
+import org.hibernate.annotations.Cache;
+
 import com.pac.model.secutiry.Role;
 
 @Data
 @Entity
+@Cacheable
 @Table(name = "users")
 public class User {
 

@@ -26,10 +26,10 @@ public class Contract {
     private String id;
 
     @Column(name = "car_id")
-    private int car_id;
+    private long car_id;
 
     @Column(name = "client_id")
-    private int client_id;
+    private long client_id;
 
     @Column(name = "date_start")
     private Date date_start;
@@ -38,18 +38,17 @@ public class Contract {
     private Date date_end;
 
     @Column(name = "auto_house_id")
-    private int auto_house_id;
-
-    @Column(name = "driver_id")
-    private int driver_id;
+    private long auto_house_id;
 
     @Column(name = "is_active")
     private boolean is_active;
 
     @Column(name = "promotion_id")
-    private int promotion_id;
+    private Long promotion_id;
 
     @Column(name = "price_id")
-    private int price_id;
+    private long price_id;
 
+    @Column(name = "total_price")
+    private long total_price;
 }
