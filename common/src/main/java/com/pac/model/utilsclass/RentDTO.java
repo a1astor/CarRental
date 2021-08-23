@@ -1,12 +1,15 @@
 package com.pac.model.utilsclass;
 
-import java.util.Date;
-
 import lombok.Data;
+
+import javax.validation.constraints.NotNull;
 
 @Data
 public class RentDTO {
+    @NotNull
     private long carId;
-    private Date startDate;
-    private Date endDate;
+    @NotNull
+    private String startDate;
+    @NotNull
+    private String endDate;
 }

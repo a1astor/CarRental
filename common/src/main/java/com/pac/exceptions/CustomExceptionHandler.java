@@ -16,6 +16,16 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
         return new ResponseEntity<>(new DaoException("There is no such car"), HttpStatus.NOT_FOUND);
     }
 
+    @ExceptionHandler(NoSuchUserException.class)
+    protected ResponseEntity<DaoException> handleNoSuchUserException() {
+        return new ResponseEntity<>(new DaoException("There is no such user"), HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(WrongDateFormatException.class)
+    protected ResponseEntity<DaoException> handleWrongDateFormatException() {
+        return new ResponseEntity<>(new DaoException("String can't be parse into date"), HttpStatus.BAD_REQUEST);
+    }
+
     @ExceptionHandler(NoSuchAddressException.class)
     protected ResponseEntity<DaoException> handleNoSuchAddressException() {
         return new ResponseEntity<>(new DaoException("There is no such address"), HttpStatus.NOT_FOUND);

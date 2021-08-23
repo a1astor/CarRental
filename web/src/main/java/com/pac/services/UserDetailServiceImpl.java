@@ -16,8 +16,6 @@ public class UserDetailServiceImpl implements UserDetailsService {
 
     private final UserRepository userRepository;
 
-    private final BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-
     @Autowired
     public UserDetailServiceImpl(UserRepository userRepository) {
         this.userRepository = userRepository;
@@ -28,7 +26,7 @@ public class UserDetailServiceImpl implements UserDetailsService {
         User userByEmail = userRepository.findByEmail(username).orElseThrow(() -> new UsernameNotFoundException("Unknown email: " + username));
         return org.springframework.security.core.userdetails.User.builder()
                 .username(userByEmail.getEmail())
-                .password(passwordEncoder.encode(userByEmail.getPassword()))
+                .password(userByEmail.getPassword())
                 .roles(userByEmail.getRole().name())
                 .authorities(userByEmail.getRole().getAuthorities())
                 .build();
