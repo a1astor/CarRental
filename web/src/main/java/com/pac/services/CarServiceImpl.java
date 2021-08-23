@@ -2,6 +2,7 @@ package com.pac.services;
 
 import java.util.List;
 
+import com.pac.dao.CarSpecs;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -45,7 +46,6 @@ public class CarServiceImpl implements CarService {
         if (carDTO.getModel() != null) {
             modelId = modelRepository.getModelIdByMarkAndGenerationAndModel(model.getMark(), model.getGeneration(), model.getModel());
         }
-//        return carRepository.findAll(carDTO.getSpecification(modelId));
-        return (List<Car>) carRepository.findAll();
+        return carRepository.findAll(CarSpecs.getSpecification(carDTO, modelId));
     }
 }

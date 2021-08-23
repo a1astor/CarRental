@@ -27,11 +27,9 @@ public class RentServiceImpl implements RentService {
         Date contractCreatedDate = new Date();
         Car car = carService.findById(carId);
         if (car.isRented()) {
-            //TODO detail message string
             throw new CanNotCreateContractException();
         }
 
-        //TODO change rent value for false if exception
         car.setRented(true);
         return contractService.createNewContract(car, startDate, endDate, contractCreatedDate);
     }
