@@ -32,7 +32,6 @@ public class RentController {
 
 
     @NotNull
-//    @PreAuthorize("hasRole('USER')")
     @ApiOperation(value = "rent car for date")
     @PutMapping
     public Contract rentCar(@Valid @RequestBody RentDTO rentDTO) throws CanNotCreateContractException {
