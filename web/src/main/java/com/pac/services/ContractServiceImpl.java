@@ -57,8 +57,8 @@ public class ContractServiceImpl implements ContractService {
 
     private void validateDates(Date startDate, Date endDate, Date contractCreatedDate) throws CanNotCreateContractException {
         boolean endLessThenStart = endDate.compareTo(startDate) < 0;
-        boolean curDateLessOrEqualStart = contractCreatedDate.compareTo(startDate) > 0;
-        if (endLessThenStart || curDateLessOrEqualStart) {
+        boolean curDateMoreThenEndDate = contractCreatedDate.compareTo(endDate) > 0;
+        if (endLessThenStart || curDateMoreThenEndDate) {
             throw new CanNotCreateContractException();
         }
     }
