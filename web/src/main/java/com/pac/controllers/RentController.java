@@ -44,6 +44,6 @@ public class RentController {
         } catch (Exception e) {
             throw new WrongDateFormatException();
         }
-        return rentService.rent(rentDTO.getCarId(), startDate, endDate);
+        return rentService.rent(rentDTO.getCarId(), startDate, endDate, rentDTO.getUserId());
     }
 }

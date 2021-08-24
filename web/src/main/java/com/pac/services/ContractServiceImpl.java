@@ -38,7 +38,7 @@ public class ContractServiceImpl implements ContractService {
     }
 
     @Override
-    public Contract createNewContract(Car car, Date startDate, Date endDate, Date contractCreatedDate) throws CanNotCreateContractException {
+    public Contract createNewContract(Car car, Date startDate, Date endDate, Date contractCreatedDate, User user) throws CanNotCreateContractException {
         validateDates(startDate, endDate, contractCreatedDate);
         Contract contract = new Contract();
         contract.setCar_id(car.getId());
@@ -46,9 +46,7 @@ public class ContractServiceImpl implements ContractService {
         contract.setAuto_house_id(car.getAutohouse_id());
         contract.setDate_start(startDate);
         contract.setDate_end(endDate);
-        String email = SecurityContextHolder.getContext().getAuthentication().getName();
-        User currentUser = userRepository.findByEmail(email).orElseThrow(CanNotCreateContractException::new);
-        contract.setClient_id(currentUser.getId());
+        contract.setClient_id(user.getId());
         setPromotionToContract(contract, contractCreatedDate);
         contract.setTotal_price(calculateTotalPrice(contract, startDate, endDate));
         contractRepository.save(contract);

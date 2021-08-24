@@ -12,4 +12,6 @@ public class RentDTO {
     private String startDate;
     @NotNull
     private String endDate;
+    @NotNull
+    private Long userId;
 }
